@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhn.chatroom.Dao.UserDao">
+    <!-- 具体的sql语句 -->
+
+    <!--根据ID号查询-->
+    <select id="getById" resultType="User" parameterType="int">
+        SELECT *
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <!--根据用户名查询-->
+    <select id="getByName" resultType="User" parameterType="String">
+        SELECT *
+        FROM  user
+        WHERE name = #{name}
+    </select>
+
+    <!--根据用户名注册-->
+    <insert id="registerByName" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+      INSERT INTO user(name,password) values(#{name},#{password})
+    </insert>
+
+
+</mapper>

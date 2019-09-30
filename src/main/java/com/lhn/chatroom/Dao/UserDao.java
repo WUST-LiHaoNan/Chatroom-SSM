@@ -1,0 +1,31 @@
+package com.lhn.chatroom.Dao;
+
+import com.lhn.chatroom.Entity.User;
+import org.springframework.stereotype.Repository;
+
+/**
+ * Created by lhn on 2017/3/1.
+ */
+@Repository
+public interface UserDao {
+    /**
+     * 根据id获得用户信息
+     * @param id
+     * @return
+     */
+    User getById(int id);
+
+    /**
+     * 根据name获得用户信息
+     * @param name
+     * @return
+     */
+    User getByName(String name);
+
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
+    int registerByName(User user);
+}
