@@ -23,7 +23,7 @@ public class UserDaoTest extends BaseTest{
 
     @Test
     public void testGetByName(){
-        User user = userDao.getByName("lhn");
+        User user = userDao.getByName("yuanzhe");
         System.out.println(user.toString());
     }
 }

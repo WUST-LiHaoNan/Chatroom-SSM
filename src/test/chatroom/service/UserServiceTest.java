@@ -17,7 +17,7 @@ public class UserServiceTest extends BaseTest{
 
     @Test
     public void testLogin(){
-        User user = userService.login("lhn","lhn");
+        User user = userService.login("lihaonan","123456");
         System.out.println(user.toString());
     }
 }
