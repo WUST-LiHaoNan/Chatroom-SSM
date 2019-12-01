@@ -24,5 +24,8 @@
       INSERT INTO user(name,password) values(#{name},#{password})
     </insert>
 
-
+    <select id="getAllUser" resultType="User">
+        SELECT *
+        FROM  user
+    </select>
 </mapper>

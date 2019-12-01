@@ -3,6 +3,8 @@ package com.lhn.chatroom.Dao;
 import com.lhn.chatroom.Entity.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by lhn on 2017/3/1.
  */
@@ -28,4 +30,11 @@ public interface UserDao {
      * @return
      */
     int registerByName(User user);
+
+    /**
+     * 获取全部用户信息
+     * @param
+     * @return
+     */
+    List<User> getAllUser();
 }

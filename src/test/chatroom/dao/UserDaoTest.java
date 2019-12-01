@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by lhn on 2017/3/3.
@@ -24,7 +25,7 @@ public class UserDaoTest extends BaseTest{
 
     @Test
     public void testGetByName(){
-        User user = userDao.getByName("yuanzhe");
+        User user = userDao.getByName("Nick");
         System.out.println(user.toString());
     }
 
@@ -35,5 +36,10 @@ public class UserDaoTest extends BaseTest{
         user.setPassword("123456");
         int flag =userDao.registerByName(user);
         System.out.print(flag);
+    }
+
+    @Test public void testGetAllStudent(){
+        List<User> userList = userDao.getAllUser();
+        System.out.print(userList);
     }
 }
