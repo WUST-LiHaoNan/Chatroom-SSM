@@ -26,4 +26,13 @@ public class UserDaoTest extends BaseTest{
         User user = userDao.getByName("yuanzhe");
         System.out.println(user.toString());
     }
+
+    @Test
+    public void testRegisterByName(){
+        User user = new User();
+        user.setName("Nick");
+        user.setPassword("123456");
+        int flag =userDao.registerByName(user);
+        System.out.print(flag);
+    }
 }
