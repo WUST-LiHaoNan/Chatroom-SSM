@@ -4,13 +4,14 @@ import chatroom.BaseTest;
 import com.lhn.chatroom.Dao.UserDao;
 import com.lhn.chatroom.Entity.User;
 import org.junit.Test;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
 /**
  * Created by lhn on 2017/3/3.
  */
-
+@Transactional
 public class UserDaoTest extends BaseTest{
     @Resource
     UserDao userDao;
@@ -30,7 +31,7 @@ public class UserDaoTest extends BaseTest{
     @Test
     public void testRegisterByName(){
         User user = new User();
-        user.setName("Nick");
+        user.setName("Lhnxxx");
         user.setPassword("123456");
         int flag =userDao.registerByName(user);
         System.out.print(flag);
