@@ -24,6 +24,7 @@
       INSERT INTO user(name,password) values(#{name},#{password})
     </insert>
 
+    <!--查询全部用户信息-->
     <select id="getAllUser" resultType="User">
         SELECT *
         FROM  user
