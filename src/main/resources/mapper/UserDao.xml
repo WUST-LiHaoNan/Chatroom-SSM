@@ -29,4 +29,10 @@
         SELECT *
         FROM  user
     </select>
+
+    <!--返回MAP类型-->
+    <select id="getUser" resultType="map" parameterType="int">
+        SELECT *
+        FROM  user where id=#{id}
+    </select>
 </mapper>

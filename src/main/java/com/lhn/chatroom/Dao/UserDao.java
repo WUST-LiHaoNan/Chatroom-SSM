@@ -4,6 +4,7 @@ import com.lhn.chatroom.Entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by lhn on 2017/3/1.
@@ -37,4 +38,6 @@ public interface UserDao {
      * @return
      */
     List<User> getAllUser();
+
+    Map<String,Object> getUser(int id);
 }

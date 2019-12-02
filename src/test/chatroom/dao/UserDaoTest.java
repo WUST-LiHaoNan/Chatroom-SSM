@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by lhn on 2017/3/3.
@@ -38,8 +39,18 @@ public class UserDaoTest extends BaseTest{
         System.out.print(flag);
     }
 
-    @Test public void testGetAllStudent(){
+    @Test
+    public void testGetAllUser(){
         List<User> userList = userDao.getAllUser();
         System.out.print(userList);
+    }
+
+    @Test
+    public void testGetUser(){
+        Map<String,Object> userMap = userDao.getUser(1);
+        for (Map.Entry<String, Object> user : userMap.entrySet())
+        {
+            System.out.println(user.getKey() + " : " + user.getValue());
+        }
     }
 }
