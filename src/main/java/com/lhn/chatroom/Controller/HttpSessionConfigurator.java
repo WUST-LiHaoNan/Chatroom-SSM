@@ -5,7 +5,7 @@ import javax.websocket.HandshakeResponse;
 import javax.websocket.server.HandshakeRequest;
 import javax.websocket.server.ServerEndpointConfig;
 
-/** e
+/**
  * Created by mac on 2019/2/26.
  */
 public class HttpSessionConfigurator extends ServerEndpointConfig.Configurator  {

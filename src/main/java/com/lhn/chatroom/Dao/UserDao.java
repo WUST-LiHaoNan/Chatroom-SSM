@@ -39,5 +39,10 @@ public interface UserDao {
      */
     List<User> getAllUser();
 
+    /**
+     * 获取用户Map信息
+     * @param id
+     * @return
+     */
     Map<String,Object> getUser(int id);
 }
